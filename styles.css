@@ -1,28 +1,48 @@
 .stMainBlockContainer {
-    max-width: 940px;
-    padding-top: 4.5rem;
-    padding-bottom: 2rem;
+    max-width: 1160px;
+    padding-top: 3.5rem;
+    padding-bottom: 1rem;
 }
 
 h1 {
-    font-size: 2.3rem !important;
+    font-size: 2rem !important;
     letter-spacing: -0.06rem;
+    padding-top: 0 !important;
+    padding-bottom: 0.5rem !important;
 }
 
 h2, h3 {
     font-size: 1.25rem !important;
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.5rem !important;
 }
 
 .st-key-review_panel,
-.st-key-result_panel,
-.st-key-summary_panel {
+.st-key-output_panel {
     background: #fff;
     border-color: #d9e0d9;
-    padding: 1.25rem;
+    padding: 0.9rem;
+}
+
+.st-key-review_panel [data-testid="stVerticalBlock"],
+.st-key-output_panel [data-testid="stVerticalBlock"] {
+    gap: 0.6rem;
+}
+
+.st-key-result_panel [data-testid="stMarkdown"] p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.st-key-summary_panel {
+    border-top: 1px solid #d9e0d9;
+    padding-top: 1rem;
 }
 
 textarea {
     line-height: 1.65 !important;
+    height: clamp(110px, 22vh, 180px) !important;
+    min-height: 110px !important;
 }
 
 button:focus-visible,
@@ -31,23 +51,13 @@ textarea:focus-visible {
     outline-offset: 3px;
 }
 
-.sentiment-label {
-    display: inline-block;
-    margin: 0.4rem 0 0.75rem;
-    padding: 0.45rem 1rem;
-    border-radius: 6px;
-    font-size: 1.25rem;
-    font-weight: 600;
-}
-
-.positive { color: #20523c; background: #e7f2eb; }
-.negative { color: #8b2e2e; background: #fcecec; }
-.neutral { color: #485261; background: #edf0f4; }
-
 @media (max-width: 640px) {
-    .stMainBlockContainer { padding-top: 4rem; }
-    h1 { font-size: 1.8rem !important; }
+    .stMainBlockContainer { padding: 3.5rem 1rem 0.25rem; }
+    h1 { font-size: 1.6rem !important; }
     .st-key-review_panel,
-    .st-key-result_panel,
-    .st-key-summary_panel { padding: 1rem; }
+    .st-key-output_panel { padding: 0.65rem; }
+    textarea { height: 110px !important; }
+    .st-key-summary_panel { padding-top: 0.5rem; }
+    .st-key-output_panel [data-testid="stVerticalBlock"] { gap: 0.4rem; }
+    .st-key-summary_panel [data-testid="stMetricValue"] p { font-size: 1.6rem; }
 }

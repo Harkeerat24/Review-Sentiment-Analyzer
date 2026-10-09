@@ -1,0 +1,14 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.env
+.env.*
+.streamlit/secrets.toml
+.DS_Store
+Thumbs.db
